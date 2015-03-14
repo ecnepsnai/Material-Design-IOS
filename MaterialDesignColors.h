@@ -1,5 +1,5 @@
 //
-//  MaterialDesignColours.h
+//  MaterialDesignColors.h
 //
 //  Created by Ian Spence on 2014-12-21.
 //  Copyright (c) 2014 ecnepsnai. All rights reserved.
@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (MaterialDesignColours)
+@interface UIColor (MaterialDesignColors)
 
 + (UIColor *)MaterialRedWithLevel:(int)level;
 + (UIColor *)MaterialPinkWithLevel:(int)level;

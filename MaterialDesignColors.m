@@ -1,13 +1,13 @@
 //
-//  MaterialDesignColours.m
+//  MaterialDesignColors.m
 //
 //  Created by Ian Spence on 2014-12-21.
 //  Copyright (c) 2014 ecnepsnai. All rights reserved.
 //
 
-#import "MaterialDesignColours.h"
+#import "MaterialDesignColors.h"
 
-@implementation UIColor (MaterialDesignColours)
+@implementation UIColor (MaterialDesignColors)
 
 + (UIColor *)MaterialRedWithLevel:(int)level{
 	switch(level){
