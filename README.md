@@ -5,7 +5,7 @@ The Material Design Colours on IOS in Objective-C.  It has all of the colours (e
 
 MDI is really easy to use, just import:
 
-    #import "MaterialDesignColours.h"
+    #import "MaterialDesignColors.h"
     
 And use it:
     
