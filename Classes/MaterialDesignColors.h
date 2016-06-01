@@ -1,13 +1,16 @@
-//
-//  MaterialDesignColors.h
-//
-//  Created by Ian Spence on 2014-12-21.
-//  Copyright (c) 2014 ecnepsnai. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface UIColor (MaterialDesignColors)
+
+- (UIColor *) contentColor;
++ (NSArray *)AllMaterialColours;
++ (NSArray *)AllMaterialColoursWithLevel:(int)level;
+- (UIColor *)ColorFromString:(NSString *)string;
+- (UIColor *)ColorFromString:(NSString *)string WithLevel:(int)level;
+- (NSString *)StringFromColour:(UIColor *)colour;
+- (BOOL)isColourEqualTo:(UIColor *)colour;
+- (BOOL)isColourEqualTo:(UIColor *)colour thisColour:(UIColor *)otherColour;
+- (NSString *)hexString;
 
 + (UIColor *)MaterialRedWithLevel:(int)level;
 + (UIColor *)MaterialPinkWithLevel:(int)level;
