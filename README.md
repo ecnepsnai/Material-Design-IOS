@@ -1,16 +1,37 @@
-# Material Design IOS
-The Material Design Colours on IOS in Objective-C.  It has all of the colours (except Black and White) [seen here](http://www.google.com/design/spec/style/color.html#color-color-palette).
+# Material Design Colors in iOS
+A simple framework that lets you easily use Material Design Colors in any iOS or TVOS project!
+
+Includes all colors (except Black and White) [seen here](http://www.google.com/design/spec/style/color.html#color-color-palette).
+
+## Installation
+
+### Cocoapods
+
+Add:
+
+    pod 'MaterialDesignColors'
+
+To your pod file. *Make sure you uncomment `use_frameworks!` if you're using Swift!*
+
+### Manually
+
+Drag the two files inside the Classes directory onto your project and import them.
 
 ## Usage
 
-MDI is really easy to use, just import:
+### Getting a color
 
-    #import "MaterialDesignColors.h"
-    
-And use it:
-    
-    UIColor * MyColor = [UIColor MaterialRed];
-    
-The level of the colour is optional, if you don't specify a level it will return 500.  Otherwise you can specify a specific level using:
+To get a color, simply use:
 
-    UIColor * MyColor = [UIColor MaterialRedWithLevel:200];
+    UIColor * myColor = [UIColor materialRed];
+
+You can also specify a colors level using:
+
+    UIColor * myColor = [UIColor materialRedWithLevel:800];
+
+Not specifying a level will return 500.
+
+You can also determine the best color to use for content of a given background color using:
+
+    UIColor * backgroundColor = [UIColor materialRed];
+    UIColor * foregroundColor = [backgroundColor contentColor];

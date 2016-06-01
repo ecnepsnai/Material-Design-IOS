@@ -1,160 +1,187 @@
 #import "MaterialDesignColors.h"
 
-@implementation UIColor (MaterialDesignColours)
+@implementation UIColor (MaterialDesignColors)
 
-- (UIColor *) contentColor {
-    if([self isColourEqualTo:[UIColor MaterialRed]]){
+- (UIColor * _Nonnull) contentColor {
+    if ([self isColorEqualTo:[UIColor materialRed]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialPink]]){
+    } else if ([self isColorEqualTo:[UIColor materialPink]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialPurple]]){
+    } else if ([self isColorEqualTo:[UIColor materialPurple]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialDeepPurple]]){
+    } else if ([self isColorEqualTo:[UIColor materialDeepPurple]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialIndigo]]){
+    } else if ([self isColorEqualTo:[UIColor materialIndigo]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialBlue]]){
+    } else if ([self isColorEqualTo:[UIColor materialBlue]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialLightBlue]]){
+    } else if ([self isColorEqualTo:[UIColor materialLightBlue]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialCyan]]){
+    } else if ([self isColorEqualTo:[UIColor materialCyan]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialTeal]]){
+    } else if ([self isColorEqualTo:[UIColor materialTeal]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialGreen]]){
+    } else if ([self isColorEqualTo:[UIColor materialGreen]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialLightGreen]]){
+    } else if ([self isColorEqualTo:[UIColor materialLightGreen]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialLime]]){
+    } else if ([self isColorEqualTo:[UIColor materialLime]]) {
         return [UIColor blackColor];
-    } else if([self isColourEqualTo:[UIColor MaterialYellow]]){
+    } else if ([self isColorEqualTo:[UIColor materialYellow]]) {
         return [UIColor blackColor];
-    } else if([self isColourEqualTo:[UIColor MaterialAmber]]){
+    } else if ([self isColorEqualTo:[UIColor materialAmber]]) {
         return [UIColor blackColor];
-    } else if([self isColourEqualTo:[UIColor MaterialOrange]]){
+    } else if ([self isColorEqualTo:[UIColor materialOrange]]) {
         return [UIColor blackColor];
-    } else if([self isColourEqualTo:[UIColor MaterialDeepOrange]]){
+    } else if ([self isColorEqualTo:[UIColor materialDeepOrange]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialBrown]]){
+    } else if ([self isColorEqualTo:[UIColor materialBrown]]) {
         return [UIColor whiteColor];
-    } else if([self isColourEqualTo:[UIColor MaterialBlueGrey]]){
+    } else if ([self isColorEqualTo:[UIColor materialBlueGrey]]) {
         return [UIColor whiteColor];
     } else {
         return [UIColor whiteColor];
     }
 }
 
-- (UIColor *) ColorFromString:(NSString *)string{
-    return [[UIColor alloc] ColorFromString:string WithLevel:500];
++ (NSArray<UIColor *> * _Nonnull) allMaterialColors {
+    return [UIColor allMaterialColorsWithLevel:500];
 }
 
-- (UIColor *) ColorFromString:(NSString *)string WithLevel:(int)level{
-    if([string isEqualToString:@"Red"]){
-        return [UIColor MaterialRedWithLevel:level];
-    } else if([string isEqualToString:@"Pink"]){
-        return [UIColor MaterialPinkWithLevel:level];
-    } else if([string isEqualToString:@"Purple"]){
-        return [UIColor MaterialPurpleWithLevel:level];
-    } else if([string isEqualToString:@"DeepPurple"]){
-        return [UIColor MaterialDeepPurpleWithLevel:level];
-    } else if([string isEqualToString:@"Indigo"]){
-        return [UIColor MaterialIndigoWithLevel:level];
-    } else if([string isEqualToString:@"Blue"]){
-        return [UIColor MaterialBlueWithLevel:level];
-    } else if([string isEqualToString:@"LightBlue"]){
-        return [UIColor MaterialLightBlueWithLevel:level];
-    } else if([string isEqualToString:@"Cyan"]){
-        return [UIColor MaterialCyanWithLevel:level];
-    } else if([string isEqualToString:@"Teal"]){
-        return [UIColor MaterialTealWithLevel:level];
-    } else if([string isEqualToString:@"Green"]){
-        return [UIColor MaterialGreenWithLevel:level];
-    } else if([string isEqualToString:@"LightGreen"]){
-        return [UIColor MaterialLightGreenWithLevel:level];
-    } else if([string isEqualToString:@"Lime"]){
-        return [UIColor MaterialLimeWithLevel:level];
-    } else if([string isEqualToString:@"Yellow"]){
-        return [UIColor MaterialYellowWithLevel:level];
-    } else if([string isEqualToString:@"Amber"]){
-        return [UIColor MaterialAmberWithLevel:level];
-    } else if([string isEqualToString:@"Orange"]){
-        return [UIColor MaterialOrangeWithLevel:level];
-    } else if([string isEqualToString:@"DeepOrange"]){
-        return [UIColor MaterialDeepOrangeWithLevel:level];
-    } else if([string isEqualToString:@"Brown"]){
-        return [UIColor MaterialBrownWithLevel:level];
-    } else if([string isEqualToString:@"BlueGrey"]){
-        return [UIColor MaterialBlueGreyWithLevel:level];
++ (NSArray<UIColor *> * _Nullable) allMaterialColorsWithLevel:(int)level {
+    return @[
+             [UIColor materialBlueWithLevel:level],
+             [UIColor materialLightBlueWithLevel:level],
+             [UIColor materialCyanWithLevel:level],
+             [UIColor materialTealWithLevel:level],
+             [UIColor materialGreenWithLevel:level],
+             [UIColor materialLightGreenWithLevel:level],
+             [UIColor materialLimeWithLevel:level],
+             [UIColor materialYellowWithLevel:level],
+             [UIColor materialAmberWithLevel:level],
+             [UIColor materialOrangeWithLevel:level],
+             [UIColor materialDeepOrangeWithLevel:level],
+             [UIColor materialBrownWithLevel:level],
+             [UIColor materialRedWithLevel:level],
+             [UIColor materialPinkWithLevel:level],
+             [UIColor materialPurpleWithLevel:level],
+             [UIColor materialDeepPurpleWithLevel:level],
+             [UIColor materialIndigoWithLevel:level],
+             [UIColor materialBlueGreyWithLevel:level]
+             ];
+}
+
+- (UIColor * _Nullable) colorFromString:(NSString * _Nonnull)string {
+    return [[UIColor alloc] colorFromString:string WithLevel:500];
+}
+
+- (UIColor * _Nullable) colorFromString:(NSString * _Nonnull)string WithLevel:(int)level {
+    if ([string isEqualToString:@"Red"]) {
+        return [UIColor materialRedWithLevel:level];
+    } else if ([string isEqualToString:@"Pink"]) {
+        return [UIColor materialPinkWithLevel:level];
+    } else if ([string isEqualToString:@"Purple"]) {
+        return [UIColor materialPurpleWithLevel:level];
+    } else if ([string isEqualToString:@"DeepPurple"]) {
+        return [UIColor materialDeepPurpleWithLevel:level];
+    } else if ([string isEqualToString:@"Indigo"]) {
+        return [UIColor materialIndigoWithLevel:level];
+    } else if ([string isEqualToString:@"Blue"]) {
+        return [UIColor materialBlueWithLevel:level];
+    } else if ([string isEqualToString:@"LightBlue"]) {
+        return [UIColor materialLightBlueWithLevel:level];
+    } else if ([string isEqualToString:@"Cyan"]) {
+        return [UIColor materialCyanWithLevel:level];
+    } else if ([string isEqualToString:@"Teal"]) {
+        return [UIColor materialTealWithLevel:level];
+    } else if ([string isEqualToString:@"Green"]) {
+        return [UIColor materialGreenWithLevel:level];
+    } else if ([string isEqualToString:@"LightGreen"]) {
+        return [UIColor materialLightGreenWithLevel:level];
+    } else if ([string isEqualToString:@"Lime"]) {
+        return [UIColor materialLimeWithLevel:level];
+    } else if ([string isEqualToString:@"Yellow"]) {
+        return [UIColor materialYellowWithLevel:level];
+    } else if ([string isEqualToString:@"Amber"]) {
+        return [UIColor materialAmberWithLevel:level];
+    } else if ([string isEqualToString:@"Orange"]) {
+        return [UIColor materialOrangeWithLevel:level];
+    } else if ([string isEqualToString:@"DeepOrange"]) {
+        return [UIColor materialDeepOrangeWithLevel:level];
+    } else if ([string isEqualToString:@"Brown"]) {
+        return [UIColor materialBrownWithLevel:level];
+    } else if ([string isEqualToString:@"BlueGrey"]) {
+        return [UIColor materialBlueGreyWithLevel:level];
     } else {
         return nil;
     }
 }
 
-- (NSString *) StringFromColour:(UIColor *)colour{
-    if([colour isColourEqualTo:[UIColor MaterialRed]]){
+- (NSString * _Nullable) stringValue {
+    if ([self isColorEqualTo:[UIColor materialRed]]) {
         return @"Red";
-    } else if([colour isColourEqualTo:[UIColor MaterialPink]]){
+    } else if ([self isColorEqualTo:[UIColor materialPink]]) {
         return @"Pink";
-    } else if([colour isColourEqualTo:[UIColor MaterialPurple]]){
+    } else if ([self isColorEqualTo:[UIColor materialPurple]]) {
         return @"Purple";
-    } else if([colour isColourEqualTo:[UIColor MaterialDeepPurple]]){
+    } else if ([self isColorEqualTo:[UIColor materialDeepPurple]]) {
         return @"DeepPurple";
-    } else if([colour isColourEqualTo:[UIColor MaterialIndigo]]){
+    } else if ([self isColorEqualTo:[UIColor materialIndigo]]) {
         return @"Indigo";
-    } else if([colour isColourEqualTo:[UIColor MaterialBlue]]){
+    } else if ([self isColorEqualTo:[UIColor materialBlue]]) {
         return @"Blue";
-    } else if([colour isColourEqualTo:[UIColor MaterialLightBlue]]){
+    } else if ([self isColorEqualTo:[UIColor materialLightBlue]]) {
         return @"LightBlue";
-    } else if([colour isColourEqualTo:[UIColor MaterialCyan]]){
+    } else if ([self isColorEqualTo:[UIColor materialCyan]]) {
         return @"Cyan";
-    } else if([colour isColourEqualTo:[UIColor MaterialTeal]]){
+    } else if ([self isColorEqualTo:[UIColor materialTeal]]) {
         return @"Teal";
-    } else if([colour isColourEqualTo:[UIColor MaterialGreen]]){
+    } else if ([self isColorEqualTo:[UIColor materialGreen]]) {
         return @"Green";
-    } else if([colour isColourEqualTo:[UIColor MaterialLightGreen]]){
+    } else if ([self isColorEqualTo:[UIColor materialLightGreen]]) {
         return @"LightGreen";
-    } else if([colour isColourEqualTo:[UIColor MaterialLime]]){
+    } else if ([self isColorEqualTo:[UIColor materialLime]]) {
         return @"Lime";
-    } else if([colour isColourEqualTo:[UIColor MaterialYellow]]){
+    } else if ([self isColorEqualTo:[UIColor materialYellow]]) {
         return @"Yellow";
-    } else if([colour isColourEqualTo:[UIColor MaterialAmber]]){
+    } else if ([self isColorEqualTo:[UIColor materialAmber]]) {
         return @"Amber";
-    } else if([colour isColourEqualTo:[UIColor MaterialOrange]]){
+    } else if ([self isColorEqualTo:[UIColor materialOrange]]) {
         return @"Orange";
-    } else if([colour isColourEqualTo:[UIColor MaterialDeepOrange]]){
+    } else if ([self isColorEqualTo:[UIColor materialDeepOrange]]) {
         return @"DeepOrange";
-    } else if([colour isColourEqualTo:[UIColor MaterialBrown]]){
+    } else if ([self isColorEqualTo:[UIColor materialBrown]]) {
         return @"Brown";
-    } else if([colour isColourEqualTo:[UIColor MaterialBlueGrey]]){
+    } else if ([self isColorEqualTo:[UIColor materialBlueGrey]]) {
         return @"BlueGrey";
     } else {
         return nil;
     }
 }
 
-- (BOOL) isColourEqualTo:(UIColor *)colour{
-    return [self isColourEqualTo:colour thisColour:self];
+- (BOOL) isColorEqualTo:(UIColor * _Nonnull)color {
+    return [self isColorEqualTo:color thisColor:self];
 }
 
-- (BOOL) isColourEqualTo:(UIColor *)colour thisColour:(UIColor *)otherColour{
-    const CGFloat* components1 = CGColorGetComponents(colour.CGColor);
-    const CGFloat* components2 = CGColorGetComponents(otherColour.CGColor);
+- (BOOL) isColorEqualTo:(UIColor * _Nonnull)color thisColor:(UIColor * _Nonnull)otherColor {
+    const CGFloat* components1 = CGColorGetComponents(color.CGColor);
+    const CGFloat* components2 = CGColorGetComponents(otherColor.CGColor);
     int x = 0;
-    BOOL coloursAreEqual = YES;
+    BOOL colorsAreEqual = YES;
     while (x < 2) {
-        if(components1[x] != components2[x]){
-            coloursAreEqual = NO;
+        if (components1[x] != components2[x]) {
+            colorsAreEqual = NO;
         }
         x ++;
     }
-    if(CGColorGetAlpha(colour.CGColor) != CGColorGetAlpha(otherColour.CGColor)){
-        coloursAreEqual = NO;
+    if (CGColorGetAlpha(color.CGColor) != CGColorGetAlpha(otherColor.CGColor)) {
+        colorsAreEqual = NO;
     }
 
-    return coloursAreEqual;
+    return colorsAreEqual;
 }
 
-- (NSString *) hexString{
+- (NSString * _Nonnull) hexString {
     const CGFloat *components = CGColorGetComponents(self.CGColor);
 
     return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
@@ -163,35 +190,8 @@
             lroundf(components[2] * 255)];
 }
 
-+ (NSArray *) AllMaterialColours{
-    return [UIColor AllMaterialColoursWithLevel:500];
-}
-
-+ (NSArray *) AllMaterialColoursWithLevel:(int)level{
-    return @[
-        [UIColor MaterialBlueWithLevel:level],
-        [UIColor MaterialLightBlueWithLevel:level],
-        [UIColor MaterialCyanWithLevel:level],
-        [UIColor MaterialTealWithLevel:level],
-        [UIColor MaterialGreenWithLevel:level],
-        [UIColor MaterialLightGreenWithLevel:level],
-        [UIColor MaterialLimeWithLevel:level],
-        [UIColor MaterialYellowWithLevel:level],
-        [UIColor MaterialAmberWithLevel:level],
-        [UIColor MaterialOrangeWithLevel:level],
-        [UIColor MaterialDeepOrangeWithLevel:level],
-        [UIColor MaterialBrownWithLevel:level],
-        [UIColor MaterialRedWithLevel:level],
-        [UIColor MaterialPinkWithLevel:level],
-        [UIColor MaterialPurpleWithLevel:level],
-        [UIColor MaterialDeepPurpleWithLevel:level],
-        [UIColor MaterialIndigoWithLevel:level],
-        [UIColor MaterialBlueGreyWithLevel:level]
-    ];
-}
-
-+ (UIColor *) MaterialRedWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialRedWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:1.0 green:0.922 blue:0.933 alpha:1];
         case 100:
@@ -217,8 +217,8 @@
     }
 }
 
-+ (UIColor *) MaterialPinkWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialPinkWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.988 green:0.894 blue:0.925 alpha:1];
         case 100:
@@ -244,8 +244,8 @@
     }
 }
 
-+ (UIColor *) MaterialPurpleWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialPurpleWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.953 green:0.898 blue:0.961 alpha:1];
         case 100:
@@ -271,8 +271,8 @@
     }
 }
 
-+ (UIColor *) MaterialDeepPurpleWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialDeepPurpleWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.929 green:0.906 blue:0.965 alpha:1];
         case 100:
@@ -298,8 +298,8 @@
     }
 }
 
-+ (UIColor *) MaterialIndigoWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialIndigoWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.91 green:0.918 blue:0.965 alpha:1];
         case 100:
@@ -325,8 +325,8 @@
     }
 }
 
-+ (UIColor *) MaterialBlueWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialBlueWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.89 green:0.949 blue:0.992 alpha:1];
         case 100:
@@ -352,8 +352,8 @@
     }
 }
 
-+ (UIColor *) MaterialLightBlueWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialLightBlueWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.882 green:0.961 blue:0.996 alpha:1];
         case 100:
@@ -379,8 +379,8 @@
     }
 }
 
-+ (UIColor *) MaterialCyanWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialCyanWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.878 green:0.969 blue:0.98 alpha:1];
         case 100:
@@ -406,8 +406,8 @@
     }
 }
 
-+ (UIColor *) MaterialTealWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialTealWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.878 green:0.949 blue:0.945 alpha:1];
         case 100:
@@ -433,8 +433,8 @@
     }
 }
 
-+ (UIColor *) MaterialGreenWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialGreenWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.91 green:0.961 blue:0.914 alpha:1];
         case 100:
@@ -460,8 +460,8 @@
     }
 }
 
-+ (UIColor *) MaterialLightGreenWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialLightGreenWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.945 green:0.973 blue:0.914 alpha:1];
         case 100:
@@ -487,8 +487,8 @@
     }
 }
 
-+ (UIColor *) MaterialLimeWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialLimeWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.976 green:0.984 blue:0.906 alpha:1];
         case 100:
@@ -514,8 +514,8 @@
     }
 }
 
-+ (UIColor *) MaterialYellowWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialYellowWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:1.0 green:0.992 blue:0.906 alpha:1];
         case 100:
@@ -541,8 +541,8 @@
     }
 }
 
-+ (UIColor *) MaterialAmberWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialAmberWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:1.0 green:0.973 blue:0.882 alpha:1];
         case 100:
@@ -568,8 +568,8 @@
     }
 }
 
-+ (UIColor *) MaterialOrangeWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialOrangeWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:1.0 green:0.953 blue:0.878 alpha:1];
         case 100:
@@ -595,8 +595,8 @@
     }
 }
 
-+ (UIColor *) MaterialDeepOrangeWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialDeepOrangeWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.984 green:0.914 blue:0.906 alpha:1];
         case 100:
@@ -622,8 +622,8 @@
     }
 }
 
-+ (UIColor *) MaterialBrownWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialBrownWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.937 green:0.922 blue:0.914 alpha:1];
         case 100:
@@ -649,8 +649,8 @@
     }
 }
 
-+ (UIColor *) MaterialGreyWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialGreyWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:1];
         case 100:
@@ -676,8 +676,8 @@
     }
 }
 
-+ (UIColor *) MaterialBlueGreyWithLevel:(int)level{
-    switch(level){
++ (UIColor * _Nonnull) materialBlueGreyWithLevel:(int)level {
+    switch(level) {
         case 50:
             return [UIColor colorWithRed:0.925 green:0.937 blue:0.945 alpha:1];
         case 100:
@@ -703,76 +703,76 @@
     }
 }
 
-+ (UIColor *) MaterialRed{
-    return [UIColor MaterialRedWithLevel:500];
++ (UIColor * _Nonnull) materialRed {
+    return [UIColor materialRedWithLevel:500];
 }
 
-+ (UIColor *) MaterialPink{
-    return [UIColor MaterialPinkWithLevel:500];
++ (UIColor * _Nonnull) materialPink {
+    return [UIColor materialPinkWithLevel:500];
 }
 
-+ (UIColor *) MaterialPurple{
-    return [UIColor MaterialPurpleWithLevel:500];
++ (UIColor * _Nonnull) materialPurple {
+    return [UIColor materialPurpleWithLevel:500];
 }
 
-+ (UIColor *) MaterialDeepPurple{
-    return [UIColor MaterialDeepPurpleWithLevel:500];
++ (UIColor * _Nonnull) materialDeepPurple {
+    return [UIColor materialDeepPurpleWithLevel:500];
 }
 
-+ (UIColor *) MaterialIndigo{
-    return [UIColor MaterialIndigoWithLevel:500];
++ (UIColor * _Nonnull) materialIndigo {
+    return [UIColor materialIndigoWithLevel:500];
 }
 
-+ (UIColor *) MaterialBlue{
-    return [UIColor MaterialBlueWithLevel:500];
++ (UIColor * _Nonnull) materialBlue {
+    return [UIColor materialBlueWithLevel:500];
 }
 
-+ (UIColor *) MaterialLightBlue{
-    return [UIColor MaterialLightBlueWithLevel:500];
++ (UIColor * _Nonnull) materialLightBlue {
+    return [UIColor materialLightBlueWithLevel:500];
 }
 
-+ (UIColor *) MaterialCyan{
-    return [UIColor MaterialCyanWithLevel:500];
++ (UIColor * _Nonnull) materialCyan {
+    return [UIColor materialCyanWithLevel:500];
 }
 
-+ (UIColor *) MaterialTeal{
-    return [UIColor MaterialTealWithLevel:500];
++ (UIColor * _Nonnull) materialTeal {
+    return [UIColor materialTealWithLevel:500];
 }
 
-+ (UIColor *) MaterialGreen{
-    return [UIColor MaterialGreenWithLevel:500];
++ (UIColor * _Nonnull) materialGreen {
+    return [UIColor materialGreenWithLevel:500];
 }
 
-+ (UIColor *) MaterialLightGreen{
-    return [UIColor MaterialLightGreenWithLevel:500];
++ (UIColor * _Nonnull) materialLightGreen {
+    return [UIColor materialLightGreenWithLevel:500];
 }
 
-+ (UIColor *) MaterialLime{
-    return [UIColor MaterialLimeWithLevel:500];
++ (UIColor * _Nonnull) materialLime {
+    return [UIColor materialLimeWithLevel:500];
 }
 
-+ (UIColor *) MaterialYellow{
-    return [UIColor MaterialYellowWithLevel:500];
++ (UIColor * _Nonnull) materialYellow {
+    return [UIColor materialYellowWithLevel:500];
 }
 
-+ (UIColor *) MaterialAmber{
-    return [UIColor MaterialAmberWithLevel:500];
++ (UIColor * _Nonnull) materialAmber {
+    return [UIColor materialAmberWithLevel:500];
 }
 
-+ (UIColor *) MaterialOrange{
-    return [UIColor MaterialOrangeWithLevel:500];
++ (UIColor * _Nonnull) materialOrange {
+    return [UIColor materialOrangeWithLevel:500];
 }
 
-+ (UIColor *) MaterialDeepOrange{
-    return [UIColor MaterialDeepOrangeWithLevel:500];
++ (UIColor * _Nonnull) materialDeepOrange {
+    return [UIColor materialDeepOrangeWithLevel:500];
 }
 
-+ (UIColor *) MaterialBrown{
-    return [UIColor MaterialBrownWithLevel:500];
++ (UIColor * _Nonnull) materialBrown {
+    return [UIColor materialBrownWithLevel:500];
 }
 
-+ (UIColor *) MaterialBlueGrey{
-    return [UIColor MaterialBlueGreyWithLevel:500];
++ (UIColor * _Nonnull) materialBlueGrey {
+    return [UIColor materialBlueGreyWithLevel:500];
 }
 
 @end
