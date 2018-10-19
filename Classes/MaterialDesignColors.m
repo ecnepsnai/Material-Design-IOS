@@ -37,6 +37,8 @@
         return [UIColor whiteColor];
     } else if ([self isColorEqualTo:[UIColor materialBrown]]) {
         return [UIColor whiteColor];
+    } else if ([self isColorEqualTo:[UIColor materialGrey]]) {
+        return [UIColor blackColor];
     } else if ([self isColorEqualTo:[UIColor materialBlueGrey]]) {
         return [UIColor whiteColor];
     } else {
@@ -62,6 +64,7 @@
              [UIColor materialOrangeWithLevel:level],
              [UIColor materialDeepOrangeWithLevel:level],
              [UIColor materialBrownWithLevel:level],
+             [UIColor materialGreyWithLevel:level],
              [UIColor materialRedWithLevel:level],
              [UIColor materialPinkWithLevel:level],
              [UIColor materialPurpleWithLevel:level],
@@ -110,6 +113,8 @@
         return [UIColor materialDeepOrangeWithLevel:level];
     } else if ([string isEqualToString:@"Brown"]) {
         return [UIColor materialBrownWithLevel:level];
+    } else if ([string isEqualToString:@"Grey"]) {
+        return [UIColor materialGreyWithLevel:level];
     } else if ([string isEqualToString:@"BlueGrey"]) {
         return [UIColor materialBlueGreyWithLevel:level];
     } else {
@@ -152,6 +157,8 @@
         return @"DeepOrange";
     } else if ([self isColorEqualTo:[UIColor materialBrown]]) {
         return @"Brown";
+    } else if ([self isColorEqualTo:[UIColor materialGrey]]) {
+        return @"Grey";
     } else if ([self isColorEqualTo:[UIColor materialBlueGrey]]) {
         return @"BlueGrey";
     } else {

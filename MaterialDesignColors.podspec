@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                      = "MaterialDesignColors"
-    s.version                   = "1.0.2"
+    s.version                   = "1.0.3"
     s.summary                   = "The Material Design Colours on iOS"
     s.homepage                  = "https://github.com/ecnepsnai/Material-Design-IOS"
 
