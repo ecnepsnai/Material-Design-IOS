@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
         :git => "https://github.com/ecnepsnai/Material-Design-IOS.git",
         :tag => s.version.to_s
     }
-    s.source_files              = 'Classes/**/*'
+    s.source_files              = 'Sources/MaterialDesignIOS/**/*'
     s.requires_arc              = true
 
     s.ios.deployment_target     = '7.0'
